@@ -39,10 +39,10 @@ def classify(test_arr,train_arr, label_arr, K):
         l_sort[i] = p
     return np.argsort(l_sort)[9]
 
-train_image = 'D:/PCLOC/train-images.idx3-ubyte'
-train_lable = 'D:/PCLOC/train-labels.idx1-ubyte'
-test_image = 'D:/PCLOC/t10k-images.idx3-ubyte'
-test_label = 'D:/PCLOC/t10k-labels.idx1-ubyte'
+train_image = './train-images.idx3-ubyte'
+train_lable = './train-labels.idx1-ubyte'
+test_image = './t10k-images.idx3-ubyte'
+test_label = './t10k-labels.idx1-ubyte'
 offset, amount =map(int,input('要从第几张图片开始训练，训练图片需要多少？').split())
 train_image_arr = read_image(train_image, offset, amount)
 train_label_arr = read_label(train_lable, offset, amount)
